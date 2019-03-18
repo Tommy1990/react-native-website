@@ -163,11 +163,11 @@ export default class App extends React.Component {
 
 ## 其他的原生操作
 
-此处描述的方法大多数React Native 已经提供. 但是 这些在组合组件是不支持的,因为原生的视图不提供支持,包含你自己的应用中你自定的绝大多数组件
+此处描述的方法大多数React Native 已经提供。但是 这些在组合组件是不支持的，因为原生的视图不提供支持，包含你自己的应用中你自定的绝大多数组件
 
 ### measure(callback)
 
-量测视图在屏幕上的坐标,宽度,高度;异步回调这些参数.如果量测成功,回调如下参数:
+测量视图在屏幕上的坐标、宽度、高度，异步回调这些参数。如果量测成功，回调如下参数：
 
 - x
 - y
@@ -176,11 +176,11 @@ export default class App extends React.Component {
 - pageX
 - pageY
 
-注意,这些参数必须在视图组件在本地渲染完成后才能返回视图视图量测值.若你想尽快的获取视图组件的量测值,可考虑使用[`onLayout` prop](view.md#onlayout) 来实现.
+注意，这些参数必须在视图组件在本地渲染完成后才能返回视图视图测量值。若你想尽快的获取视图组件的测量值，可考虑使用[`onLayout` prop](view.md#onlayout) 来实现。
 
 ### measureInWindow(callback)
 
-获取指定视图在窗口上的位置,异步返回量测值. 如果根视图在另一个视图上,将返回绝对的位置. 获取成功返回如下参数:
+获取指定视图在窗口上的位置，异步返回量测值。如果根视图在另一个视图上，将返回绝对的位置。获取成功返回如下参数：
 
 - x
 - y
@@ -189,9 +189,9 @@ export default class App extends React.Component {
 
 ### measureLayout(relativeToNativeNode, onSuccess, onFail)
 
-例如 `measure()`方法, 量测相对于祖视图的位置关系, 特别的是 `relativeToNativeNode`. 意味着返回的是相对于租视图原点的x,y.
+例如 `measure()`方法，量测相对于祖视图的位置关系，特别的是 `relativeToNativeNode`。意味着返回的是相对于租视图原点的x、y。
 
- 通常我们使用 `findNodeHandle(component)`方法获取组件中原生的节点 .
+ 通常我们使用 `findNodeHandle(component)`方法获取组件中原生的节点。
 
 ```javascript
 import {findNodeHandle} from 'react-native';
@@ -199,8 +199,8 @@ import {findNodeHandle} from 'react-native';
 
 ### focus()
 
-获取给定输入框或者视图的焦点,即第一响应状态.更进一步的变换操作依赖与不同的平台和不同的视图.
+获取给定输入框或者视图的焦点。更进一步的变换操作依赖与不同的平台和不同的视图。
 
 ### blur()
 
-与 `focus()` 方法相反,该方法用来给定视图或者输入框的焦点,即取消给定视图或输入框的第一响应状态.
+与 `focus()` 方法相反，该方法用来移除给定视图或者输入框的焦点。
